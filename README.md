@@ -4,7 +4,7 @@
 
 # The World — Friday 20 November 2026
 
-A newspaper front page summing up the world news of Friday 20 November 2026 in one image. The program (`main.ts`, Node 22, standard library only) copies the image held in this repository to `/output/entry.png`; it is deterministic and offline, so both runs write byte-identical output.
+A bold tabloid front page summing up the world news of Friday 20 November 2026 in one image. The program (`main.ts`, Node 22, standard library only) copies the image held in this repository to `/output/entry.png`; it is deterministic and offline, so both runs write byte-identical output.
 
 ## The day's stories
 
@@ -13,9 +13,9 @@ A newspaper front page summing up the world news of Friday 20 November 2026 in o
 - **Myanmar guilty of genocide** — the International Court of Justice in The Hague rules that Myanmar committed genocide against the Rohingya, the first time the court has found a state responsible for genocide.
 - **Kyiv embassies hit** — Russian drone strikes on Kyiv damage the Austrian and Dutch embassies and St Volodymyr's Cathedral, killing one person.
 
-## The image (v2 — tuning round 1)
+## The image (v3 — tuning round 2, last round)
 
-The front page is an image-model artwork asset (`entry.png`, 1024×1024 JPEG, 346,843 bytes), rebuilt from scratch for tuning round 1. v1 led with a satellite view of the cyclone and three equal columns underneath; v2 is a classic broadsheet with a clearer hierarchy: a ground-level lead photograph of rescue workers wading through flooded streets in Odisha under the huge headline "AKVAN SLAMS ODISHA" (caption: "Cyclone makes landfall; 100,000 evacuated to shelters"), and the other three stories stacked as captioned panels in the right-hand column — the three leaders at the summit table, the Peace Palace in The Hague, and a strike-damaged building flying the Ukrainian flag in Kyiv. Same four stories, same date line, a more human lead image and larger, cleaner headlines that stay legible at small size. It is the repository's own artwork, made for this entry.
+The front page is an image-model artwork asset (`entry.png`, 1024×1024 JPEG, 283,989 bytes), rebuilt from scratch for tuning round 2. v2 was a classic white broadsheet with a ground-level flood-rescue lead photo and three stories stacked in a right-hand column; v3 is a bold red-and-black tabloid, materially different in design and artwork: a black masthead bar with a red date band ("FRIDAY 20 NOVEMBER 2026"), a full-width satellite view of the cyclone spiral as the hero with "AKVAN SLAMS ODISHA" overlaid on it (caption: "Cyclone landfall in Odisha; 100,000 evacuated to shelters"), and the other three stories as three horizontal photo-plus-headline bands underneath — the three leaders at the summit table, the Peace Palace in The Hague, and a strike-damaged building flying the Ukrainian flag in Kyiv — with much larger type throughout so every headline stays legible at ~300 px across. Same four stories, same date line, a new hero image and a new layout. It is the repository's own artwork, made for this entry.
 
 ## Run it
 
@@ -23,4 +23,4 @@ The front page is an image-model artwork asset (`entry.png`, 1024×1024 JPEG, 34
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
-Verified 20 Nov 2026 (tuning round 1): two runs write byte-identical output (sha256 `b263454a23cdb8fdf837d7089f3e4cc1b56a492f382f60436800389f2f79edc3`), 1024×1024 JPEG, 346,843 bytes.
+Verified 20 Nov 2026 (tuning round 2): two runs write byte-identical output (sha256 `9c71ea108da63bd45ad81cf7988523e3e7d4c704fb5817c4a72b0b52e286f666`), 1024×1024 JPEG, 283,989 bytes.
